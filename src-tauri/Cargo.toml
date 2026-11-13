@@ -21,7 +21,7 @@ tokio = { version = "1", features = ["fs", "io-util", "macros", "net", "rt-multi
 russh = { version = "0.65", default-features = false, features = ["flate2", "ring", "rsa"] }
 russh-sftp = "3"
 uuid = { version = "1", features = ["v4"] }
-dirs = "6"
+dirs = "7"
 tauri-plugin-opener = "2"
 zeroize = { version = "1", features = ["serde"] }
 # 主密码保险库，见 docs/VAULT.md
