@@ -1,0 +1,61 @@
+[package]
+name = "termipaw"
+version = "0.7.2"
+description = "A small, fast, portable SSH and SFTP client for Windows"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "termipaw_lib"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-clipboard-manager = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["fs", "io-util", "macros", "net", "rt-multi-thread", "sync", "time"] }
+russh = { version = "0.65", default-features = false, features = ["flate2", "ring", "rsa"] }
+russh-sftp = "3"
+uuid = { version = "1", features = ["v4"] }
+dirs = "6"
+tauri-plugin-opener = "2"
+zeroize = { version = "1", features = ["serde"] }
+# 主密码保险库，见 docs/VAULT.md
+argon2 = "0.6"
+base64ct = { version = "1", features = ["alloc"] }
+chacha20poly1305 = "0.11"
+getrandom = "0.4"
+unicode-normalization = "0.1"
+# 在线更新，见 docs/UPDATER.md。插件只负责检查、下载和校验签名，替换程序在 selfupdate.rs
+tauri-plugin-updater = { version = "2", default-features = false, features = ["rustls-tls", "system-proxy"] }
+
+# 系统锁屏和睡眠通知、系统语言、等待旧进程退出
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Globalization", "Win32_System_RemoteDesktop", "Win32_System_Threading", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true
+
+# 按体积优化会让密钥派生明显变慢，解锁时间是按速度优化实测的
+[profile.release.package.argon2]
+opt-level = 3
+[profile.release.package.blake2]
+opt-level = 3
+
+# 调试版不优化时派生要很久，测试会等不及
+[profile.dev.package.argon2]
+opt-level = 3
+[profile.dev.package.blake2]
+opt-level = 3
+
+[dev-dependencies]
+futures = "0.3"
+rand = { version = "0.10", features = ["thread_rng"] }

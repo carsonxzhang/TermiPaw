@@ -1,0 +1,46 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not report security problems here; see SECURITY.md. Never include passwords, private keys or other secrets.
+        Reports may be written in English or Chinese.
+  - type: input
+    id: version
+    attributes:
+      label: TermiPaw version
+      description: Shown in Menu > About.
+      placeholder: "0.7.2"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 24H2"
+    validations:
+      required: true
+  - type: input
+    id: server
+    attributes:
+      label: Server
+      description: Operating system and SSH server, if the problem involves a connection.
+      placeholder: "Ubuntu 24.04, OpenSSH 9.6"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected and what happened
+      description: Include the exact error message if one was shown.
+    validations:
+      required: true

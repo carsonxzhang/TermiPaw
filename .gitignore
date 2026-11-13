@@ -1,0 +1,12 @@
+node_modules
+dist
+src-tauri/target
+src-tauri/gen/schemas
+*.log
+*.code-workspace
+
+# 更新签名的私钥绝不能进仓库，见 docs/UPDATER.md
+*.key
+
+# 本机构建出来的程序，见 scripts/build.mjs
+builds

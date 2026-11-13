@@ -1,0 +1,36 @@
+{
+  "format": "termipaw-vault",
+  "version": 1,
+  "revision": 17,
+  "encryptMetadata": true,
+  "slots": [
+    {
+      "type": "password",
+      "kdf": {
+        "name": "argon2id",
+        "version": 19,
+        "memoryKib": 262144,
+        "iterations": 3,
+        "parallelism": 1
+      },
+      "salt": "K6niMlItzdFYKouQHEF5Zw==",
+      "nonce": "ADgUULQFQ0S5849xt8sAQjcB+csg87c+",
+      "wrappedKey": "RJE/yOsOVYbz0nCXh5jZCEf3b12n7LSM9xPcVOLvmVKsh7Fq9jhWmvPbdVPqYiv6"
+    },
+    {
+      "type": "recovery",
+      "kdf": {
+        "name": "argon2id",
+        "version": 19,
+        "memoryKib": 262144,
+        "iterations": 3,
+        "parallelism": 1
+      },
+      "salt": "dal2fCfexr+rZ1N/bUxQKg==",
+      "nonce": "K2bAne6asf4+6WC1TINPniWkfdH4ftyu",
+      "wrappedKey": "HV2pO1Gk0MqUuXU3pvyNgzRETiAAgeWBMbfdWpcKa7uz+Jtx44k0tHA70keoCGlv"
+    }
+  ],
+  "nonce": "v9ZN2LPE5SaO5yihYGZOmu4tF9Q0GIB5",
+  "ciphertext": "MWRjCUxufsYyLjz1PbpQdOJdXp/mlLurVS0gRd3klsd1ckf/7ik7WubIWnGQFJFmCUpFRHcmrZp97HVi/J7hft9TfQpzrtqxt4qAF1Vs3YrYShXOG8XdDMJPBaBfm0O6tPesc1LrgH+zn4fEm9e+ah0BYKhRDujdI7IruE3xKytDVCwz3XzmYcoepIqtW0Q9+MQQN2G4a44cEpcJguV6L5l7UUxYWIlBaSkFVgfuHbM/qQdrsIYOeqDCVkF5UtTD83AGus/vESkRO9Q3stUZAhJPohjyQ1b/3E76kCtUix7a7hsgIEQE3P7O1R2ZrEBrFvOxGvxhltoakuEgOnnBUbG3x+8a7wqd6xarOk5purlK5ony9l2aYIQifoSuT6yMupzzRHl0jkAvj2/Wci6yFTnle8p3XlEpfjeDwQwtgSo99WJtg/ZpjKz+R0N82/xaJZft7lC4jZ3dOe1gXRddXMDBU13zmSidMbO6wW/3FJMrqgTeUCYOr6Zx6WnMv9UcOUCzurFq2w3p23FMhp5AxIGh4cSf8oVjCb5LNZ4DkGYLIvFwMLm61DChRGSVa48PLsgkpni0nPGF4Hx74tFYsa7inRU="
+}

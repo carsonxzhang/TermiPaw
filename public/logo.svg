@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 66.75 352 352" role="img" aria-labelledby="title desc">
+<title id="title">TermiPaw — Cat Console</title><desc id="desc">A violet cat-eared terminal window, with a terminal prompt and a curved tail.</desc>
+<path d="M385 351 C433 353 449 321 432 302 C423 292 408 295 406 309" fill="none" stroke="#6550AF" stroke-width="19" stroke-linecap="round"/>
+<path d="M114 203 V120 Q114 106 127 115 L190 165 H319 L381 115 Q394 106 394 120 V330 Q394 374 350 374 H158 Q114 374 114 330Z" fill="#FAF9FF" stroke="#6550AF" stroke-width="21" stroke-linejoin="round"/>
+<path d="M118 227 H390" stroke="#6550AF" stroke-width="15"/>
+<circle cx="153" cy="199" r="8" fill="#6550AF"/>
+<circle cx="181" cy="199" r="8" fill="#B6A8DC"/>
+<path d="M164 268 L189 293 L164 318 M229 319 H276" fill="none" stroke="#6550AF" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
